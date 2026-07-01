@@ -62,6 +62,7 @@ namespace JunBatch2026WebFormApp
             string q = "sp_FetchManagerList";
             SqlCommand cmd = new SqlCommand(q, conn);
             SqlDataReader rdr = cmd.ExecuteReader();
+			    
 
         }
 
@@ -109,7 +110,7 @@ namespace JunBatch2026WebFormApp
 			{
 				
 				int id = int.Parse(e.CommandArgument.ToString());
-				string query = $"exec sp_DeleteEmployee '{id}'";
+				string query = $"exec sp_DeleteEmployeeee '{id}'";
 				SqlCommand cmd = new SqlCommand(query, conn);
 				cmd.ExecuteNonQuery();
 				FetchEmpList();
@@ -118,11 +119,7 @@ namespace JunBatch2026WebFormApp
 
 			}
 
-			//TextBox3.Text = 
-			//TextBox4.Text = 
-			//TextBox5.Text = 
-			
-			//DropDownList2.SelectedValue = 
+		
 
 
         }
